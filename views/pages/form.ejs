@@ -65,20 +65,54 @@
 
     <div id="lista"></div>
 
-    <h1>Canal de Chat</h1>
+    <div class="col-6 card mt-3 p-2 ">
+      <h1>Chatea con otros usuarios</h1>
 
-    <input type="text" id="chatName">
-    <input type="text" id="chatMessage">
-    <button id="button">Enviar</button>
+      <div class="col-sm-5">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="basic-addon3">Email</span>
+          <input
+            id="input-email"
+            type="text"
+            name="thumbnail"
+            required
+            class="form-control"
+            placeholder="Ingresá tu email"
+            aria-label="email"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
 
-    <div id="divMessages"></div>
+      <div class="col-sm-5">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="basic-addon3">Mensaje</span>
+          <input
+            id="input-mensaje"
+            type="email"
+            name="thumbnail"
+            required
+            class="form-control"
+            placeholder="Ingresá tu mensaje"
+            aria-label="mensaje"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
 
-    <script src="./socket.io/socket.io.min.js"></script>
-    <script src="./main.js"></script>
+      <div class="col-sm-4">
+        <div class="d-grid gap-2">
+          <button id="btn-submit-mensaje" class="btn btn-success btn-sm">
+            Enviar mensaje
+          </button>
+        </div>
+      </div>
 
+      <h2>Historial de mensajes</h2>
 
+      <div id="historial-mensajes"></div>
 
-
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
 
